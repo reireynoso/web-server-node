@@ -1,10 +1,10 @@
-console.log("Cloent side server")
+// console.log("Cloent side server")
 
-fetch('http://puzzle.mead.io/puzzle')
-.then(resp => resp.json())
-.then(data => {
-    console.log(data)
-})
+// fetch('http://puzzle.mead.io/puzzle')
+// .then(resp => resp.json())
+// .then(data => {
+//     console.log(data)
+// })
  
 
 const weatherForm = document.querySelector("form")
@@ -21,13 +21,13 @@ weatherForm.addEventListener('submit', (e) => {
     .then(data => {
         // console.log(data.error)
         if(!data.error){
-            console.log(data.forecast.summary)
-            console.log(data.location)
+            // console.log(data.forecast.summary)
+            // console.log(data.location)
             messageOne.innerText = data.forecast.summary
             messageTwo.innerText = data.location
         }
         else{
-            console.log(data.error)
+            // console.log(data.error)
             messageOne.innerText = data.error
         }   
     })
